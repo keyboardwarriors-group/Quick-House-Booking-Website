@@ -6,7 +6,7 @@
 4. Madieu A. Turay
 5. Emmanuel M. Conteh
 6. Sherinu J. Mahmoud
-7. Abdulia
+7. Abdulia I. Kamara
 8. Zechariah Bayoh
 9. Mariama B. Turay
 
