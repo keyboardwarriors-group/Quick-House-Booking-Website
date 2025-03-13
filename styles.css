@@ -1,0 +1,354 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Slideshow Gallery */
+.slideshow {
+    position: relative;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 70%;
+    display: block;
+}
+
+.slide-details {
+    height: 24%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-details h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.slide-details p {
+    margin: 1px 0;
+    font-size: 12px;
+}
+
+.btn-details {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-details:hover {
+    background: #0056b3;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda; /* Light green background */
+    border-color: #c3e6cb; /* Slightly darker green border */
+    color: #155724; /* Dark green text */
+}
+
+
+.booking-history {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.booking-history th, .booking-history td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.booking-history th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.booking-history tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.booking-history tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Reset Password Button styles */
+
+.btn-reset-password {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #dc3545; /* Red color for reset button */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease-out; /* Transition for opacity */
+}
+
+.btn-reset-password:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+}
+
+
+.btn-add-house {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #057d15; /* Red color for reset button */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease-out; /* Transition for opacity */
+}
+
+.btn-add-house:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+}  
+
+h1 span {
+    color: Green;
+}
+
+
+.btn-edit-house {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #2d07ff; /* Blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease-out; /* Transition for opacity */
+}
+
+.btn-edit-house:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+}
+
+.btn-delete-house{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #f21fc8; /* Red color for reset button */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-out; /* Transition for opacity */
+}
+
+.btn-delete-house:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+} 
+
+
+.btn-book{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #057d15; /* Red color for reset button */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease-out; /* Transition for opacity */
+}
+
+.btn-add-house:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+}     
+
+
+
+
+/* Search Form Styles */
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-form input,
+.search-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #218838;
+}
+
+
+
+/* Styles for house items */
+.house-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.house-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.house-item h3 {
+    margin: 10px 0;
+}
+
+.house-item p {
+    margin: 5px 0;
+}
+
+/* Styles for button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adds space between buttons */
+    margin-top: 15px;
+}
+
+/* Styles for View Details, Book Now, and Booked buttons */
+.btn-view-details, .btn-book {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-view-details {
+    background-color: #007bff;
+}
+
+.btn-view-details:hover {
+    background-color: #0056b3;
+}
+
+.btn-book {
+    background-color: #28a745;
+}
+
+.btn-book:hover {
+    background-color: #218838;
+}
+
+.btn-book:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Style for Login to Book button */
+.btn-book.login {
+    background-color: #007bff;
+}
+
+.btn-book.login:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Style for the active tab */
+.nav-link.active-tab {
+    color: red; /* Change to your desired color */
+    font-weight: bold; /* Optional: Make the text bold */
+    border-bottom: 2px solid red; /* Optional: Add an underline */
+}
