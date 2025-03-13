@@ -18,7 +18,7 @@
 .houses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 10px;
 }
 
 .house-item {
@@ -120,14 +120,6 @@
     cursor: not-allowed;
 }
 
-/* Style for Login to Book button */
-.btn-book.login {
-    background-color: #007bff;
-}
-
-.btn-book.login:hover {
-    background-color: #0056b3;
-}
 
 /* Styles for house items */
 .house-item {
@@ -193,11 +185,3 @@
     cursor: not-allowed;
 }
 
-/* Style for Login to Book button */
-.btn-book.login {
-    background-color: #007bff;
-}
-
-.btn-book.login:hover {
-    background-color: #0056b3;
-}      

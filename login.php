@@ -1,7 +1,14 @@
 <?php
-session_start();
-require 'db.php'; // Include your database connection
+require 'db.php'; // Include the database connection file
+session_start(); // Start the session
 
+// Display success message if set
+if (isset($_SESSION['success_message'])) {
+    $success_message = htmlspecialchars($_SESSION['success_message']);
+    unset($_SESSION['success_message']); // Clear the message after displaying
+}
+
+// Handle login form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
     $password = $_POST['password'];
@@ -31,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +51,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             align-items: center;
             height: 100vh;
             background-color: #f5f5f5;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .success-message {
+            color: green;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
         form {
             background: #fff;
@@ -52,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            margin: 0 auto;
         }
         input {
             width: 95%;
@@ -82,23 +98,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-    <form id="loginForm" action="login.php" method="POST">
-        <a href="index.html">Back</a>
-        <h2>Login</h2>
-
-        <!-- Display error message -->
-        <?php if (isset($_SESSION['error'])): ?>
-            <div style="color: red;">
-                <p><?= htmlspecialchars($_SESSION['error']) ?></p>
-                <?php unset($_SESSION['error']); // Clear error after displaying ?>
+    <div class="container">
+        <?php if (isset($success_message)): ?>
+            <div class="success-message">
+                <?= $success_message ?>
             </div>
         <?php endif; ?>
 
-        <!-- Form fields -->
-        <input type="email" name="email" placeholder="Email" required autocomplete="on">
-        <input type="password" name="password" placeholder="Password" required autocomplete="on">
-        <button type="submit">Login</button>
-        <p>Don't have an account? <a href="register.php">Sign up</a></p>
-    </form>
+        <form id="loginForm" action="login.php" method="POST">
+            <a href="index.php">Back</a>
+            <h2>Login</h2>
+            <?php if (isset($_SESSION['error'])): ?>
+                <div style="color: red;">
+                    <p><?= htmlspecialchars($_SESSION['error']) ?></p>
+                    <?php unset($_SESSION['error']); ?>
+                </div>
+            <?php endif; ?>
+            <input type="email" name="email" placeholder="Email" required autocomplete="on">
+            <input type="password" name="password" placeholder="Password" required autocomplete="on">
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="register.php">Sign up</a></p>
+        </form>
+    </div>
 </body>
 </html>
